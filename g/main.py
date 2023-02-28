@@ -15,7 +15,6 @@ class Main(QMainWindow):
         self.y = -1
         self.k = 0
         self.setMouseTracking(True)
-        self.colors = ['Yellow']
 
     def setupUi(self):
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -35,7 +34,7 @@ class Main(QMainWindow):
         qp.end()
 
     def drawing(self, qp):
-        qp.setBrush(QColor(choice(self.colors)))
+        qp.setBrush(QColor('Yellow'))
         a = randint(1, 100)
         qp.drawEllipse(self.x, self.y, a, a)
 
